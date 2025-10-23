@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ailon-app
+  name: utility-app
   namespace: staging
   labels:
-    app: ailon-app
+    app: utility-app
     environment: staging
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: ailon-app
+      app: utility-app
   template:
     metadata:
       labels:
-        app: ailon-app
+        app: utility-app
         environment: staging
     spec:
       containers:
-      - name: ailon-container
-        image: noelav07/ailon:3.0  # staging image
+      - name: utility-container
+        image: noelav07/utility:3.0  #staging image
         ports:
-        - containerPort: 80
+        - containerPort: 8090
         env:
         - name: ENVIRONMENT
           value: "staging"
         resources:
           requests:
-            memory: "64Mi"
-            cpu: "50m"
+            memory: "128Mi"
+            cpu: "100m"
           limits:
-            memory: "256Mi"
-            cpu: "250m"
+            memory: "512Mi"
+            cpu: "500m"
