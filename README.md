@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Complete EKS GitOps Setup with ArgoCD, Argo Rollouts, and Monitoring Stack
 
 This comprehensive guide walks you through setting up a complete GitOps platform on EKS with ArgoCD, Argo Rollouts for Blue/Green deployments, and a full monitoring stack including Prometheus, Grafana, and Loki.
@@ -788,3 +789,6 @@ This complete setup provides a robust foundation for modern Kubernetes applicati
 - Provides storage abstraction for pods
 
 This glossary covers the essential concepts and tools used throughout the complete EKS GitOps setup guide, providing a foundation for understanding Kubernetes and cloud-native technologies.
+=======
+# argocd2
+>>>>>>> parent of 4d5d96e... README.md
