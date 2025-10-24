@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: utility-container
-        image: noelav07/utility:3.0    # Current production image
+        image: noelav07/utility:1.0    # Current production image
         ports:
         - containerPort: 8090
         env:
