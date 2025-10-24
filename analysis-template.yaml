@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: health-check
+  namespace: production
+spec:
+  args:
+  - name: service-name
+  metrics:
+  - name: webmetric
+    successCondition: result == "true"
+    provider:
+      web:
+        url: "http://{{args.service-name}}.production.svc.cluster.local/"
+        timeoutSeconds: 20
+        headers:
+        - key: Host
+          value: "example.com"
+        jsonPath: "{$.status}"

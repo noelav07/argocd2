@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: utility-preview-service
+  namespace: production
+  labels:
+    app: utility-app
+    environment: production
+    service-type: preview
+spec:
+  selector:
+    app: utility-app
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 8090
+  type: LoadBalancer    # To access and test Green version
