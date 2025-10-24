@@ -95,7 +95,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 **Option B: LoadBalancer (External Access)**
 ```bash
 # Login using the external IP
-argocd login a932a6f14858242be9af59ab2939ea62-233495194.us-west-2.elb.amazonaws.com
+argocd login <Endpoint>
 ```
 
 ## Application Deployment with GitOps
